@@ -1,0 +1,98 @@
+<h2>Show user</h2>
+
+<ul>
+
+  <li>
+    <strong>Username:</strong>
+    <%= @user.username %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </li>
+
+  <li>
+    <strong>Password:</strong>
+    <%= @user.password %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </li>
+
+  <li>
+    <strong>Avatar:</strong>
+    <%= @user.avatar %>
+  </li>
+
+  <li>
+    <strong>Website:</strong>
+    <%= @user.website %>
+  </li>
+
+  <li>
+    <strong>Bio:</strong>
+    <%= @user.bio %>
+  </li>
+
+  <li>
+    <strong>Twitter username:</strong>
+    <%= @user.twitter_username %>
+  </li>
+
+  <li>
+    <strong>Youtube username:</strong>
+    <%= @user.youtube_username %>
+  </li>
+
+  <li>
+    <strong>Twitch username:</strong>
+    <%= @user.twitch_username %>
+  </li>
+
+  <li>
+    <strong>Gender:</strong>
+    <%= @user.gender %>
+  </li>
+
+  <li>
+    <strong>Birth year:</strong>
+    <%= @user.birth_year %>
+  </li>
+
+  <li>
+    <strong>Steam username:</strong>
+    <%= @user.steam_username %>
+  </li>
+
+  <li>
+    <strong>Battletag:</strong>
+    <%= @user.battletag %>
+  </li>
+
+  <li>
+    <strong>Accent color:</strong>
+    <%= @user.accent_color %>
+  </li>
+
+  <li>
+    <strong>Country:</strong>
+    <%= @user.country %>
+  </li>
+
+  <li>
+    <strong>Github username:</strong>
+    <%= @user.github_username %>
+  </li>
+
+  <li>
+    <strong>Verification token:</strong>
+    <%= @user.verification_token %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: user_path(@conn, :edit, @user) %>
+<%= link "Back", to: user_path(@conn, :index) %>

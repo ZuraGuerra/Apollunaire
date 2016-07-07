@@ -1,0 +1,119 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :username, class: "control-label" %>
+    <%= text_input f, :username, class: "form-control" %>
+    <%= error_tag f, :username %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :email, class: "control-label" %>
+    <%= text_input f, :email, class: "form-control" %>
+    <%= error_tag f, :email %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :password, class: "control-label" %>
+    <%= text_input f, :password, class: "form-control" %>
+    <%= error_tag f, :password %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :avatar, class: "control-label" %>
+    <%= text_input f, :avatar, class: "form-control" %>
+    <%= error_tag f, :avatar %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :website, class: "control-label" %>
+    <%= text_input f, :website, class: "form-control" %>
+    <%= error_tag f, :website %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :bio, class: "control-label" %>
+    <%= text_input f, :bio, class: "form-control" %>
+    <%= error_tag f, :bio %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :twitter_username, class: "control-label" %>
+    <%= text_input f, :twitter_username, class: "form-control" %>
+    <%= error_tag f, :twitter_username %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :youtube_username, class: "control-label" %>
+    <%= text_input f, :youtube_username, class: "form-control" %>
+    <%= error_tag f, :youtube_username %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :twitch_username, class: "control-label" %>
+    <%= text_input f, :twitch_username, class: "form-control" %>
+    <%= error_tag f, :twitch_username %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :gender, class: "control-label" %>
+    <%= text_input f, :gender, class: "form-control" %>
+    <%= error_tag f, :gender %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :birth_year, class: "control-label" %>
+    <%= text_input f, :birth_year, class: "form-control" %>
+    <%= error_tag f, :birth_year %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :steam_username, class: "control-label" %>
+    <%= text_input f, :steam_username, class: "form-control" %>
+    <%= error_tag f, :steam_username %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :battletag, class: "control-label" %>
+    <%= text_input f, :battletag, class: "form-control" %>
+    <%= error_tag f, :battletag %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :accent_color, class: "control-label" %>
+    <%= text_input f, :accent_color, class: "form-control" %>
+    <%= error_tag f, :accent_color %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :country, class: "control-label" %>
+    <%= text_input f, :country, class: "form-control" %>
+    <%= error_tag f, :country %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :github_username, class: "control-label" %>
+    <%= text_input f, :github_username, class: "form-control" %>
+    <%= error_tag f, :github_username %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :verification_token, class: "control-label" %>
+    <%= text_input f, :verification_token, class: "form-control" %>
+    <%= error_tag f, :verification_token %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

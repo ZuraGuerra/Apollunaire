@@ -1,0 +1,60 @@
+<h2>Listing users</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Name</th>
+      <th>Avatar</th>
+      <th>Website</th>
+      <th>Bio</th>
+      <th>Twitter username</th>
+      <th>Youtube username</th>
+      <th>Twitch username</th>
+      <th>Gender</th>
+      <th>Birth year</th>
+      <th>Steam username</th>
+      <th>Battletag</th>
+      <th>Accent color</th>
+      <th>Country</th>
+      <th>Github username</th>
+      <th>Verification token</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for user <- @users do %>
+    <tr>
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
+      <td><%= user.password %></td>
+      <td><%= user.name %></td>
+      <td><%= user.avatar %></td>
+      <td><%= user.website %></td>
+      <td><%= user.bio %></td>
+      <td><%= user.twitter_username %></td>
+      <td><%= user.youtube_username %></td>
+      <td><%= user.twitch_username %></td>
+      <td><%= user.gender %></td>
+      <td><%= user.birth_year %></td>
+      <td><%= user.steam_username %></td>
+      <td><%= user.battletag %></td>
+      <td><%= user.accent_color %></td>
+      <td><%= user.country %></td>
+      <td><%= user.github_username %></td>
+      <td><%= user.verification_token %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: user_path(@conn, :show, user), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: user_path(@conn, :edit, user), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New user", to: user_path(@conn, :new) %>
